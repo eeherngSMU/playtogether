@@ -1,12 +1,12 @@
 import Image from "next/image";
-import EventContainer from "./components/EventContainer";
 import Navbar from "./components/Navbar";
+import EventCarousel from "./components/EventContainer";
 
 export default function Home() {
   return (
     <main>
       <Navbar/>
-      <EventContainer eventName="Play Football"/>
+      <EventCarousel eventName="Play Football"/>
     </main>
   );
 }

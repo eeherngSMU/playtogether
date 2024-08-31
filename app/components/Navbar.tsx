@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 
 const Navbar = () => {
   return (
-    <nav className='border-b flex items-center justify-between px-2'>
+    <nav className='border-b flex items-center justify-between px-8'>
         <a href="/"><img src="playtogether.jpg" className='w-40 h-20 object-cover'/></a>
         <Input type="text" placeholder='Find your favourite sport' className='max-w-sm' />
         
