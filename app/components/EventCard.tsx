@@ -8,38 +8,26 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Button } from '@/components/ui/button'
+import { Badge } from "@/components/ui/badge"
 
-const EventCard = ({cardImg, cardTitle, cardPrice, cardAvailability, cardDateTime }) => {
+
+const EventCard = ({cardImg, cardTitle, cardPrice, cardAvailability, cardDateTime, cardBadge }) => {
   return (
-    // <div>
-    //     <img src={cardImg} className='card-img-top object-cover img-fluid' style={{height: '200px'}} />
-    //     <div className='list-group border-0 '>
-    //         <div className='list-group-item border-0 py-2'>
-    //             <div className='card-text opacity-50'>{cardDateTime}</div>
-    //             <div className='card-text opacity-50'>{cardTitle}</div>
-    //         </div>
-    //         <div className='list-group-item bg-secondary bg-opacity-10 border-0 py-2'>
-    //             <div className='card-text opacity-75'>{cardPrice}</div>
-    //             <div className='card-text opacity-75'>{cardAvailability}</div>
-    //         </div>
-            
-            
-    //     </div>
-        
-    // </div>
-
-    <div className='flex flex-col'>
+    <div className='flex flex-col' style={{ height : '450px'}}>
     <CardHeader>
-    <img src={cardImg} className='object-cover h-52 w-52' />
-      <CardDescription>
-        {cardTitle}<br/>
+      <div style={{ position: 'relative'}}>
+        <Badge style={{ position: 'absolute', top: '10px', right: '10px'}}>{cardBadge}</Badge>
+        <img src={cardImg} style={{ width: '350px', height: '280px'}} className='object-cover' />
+      </div>
+     <CardDescription className='mx-auto text-md'>
+        <span className='font-bold'>{cardTitle}</span><br/>
         {cardDateTime}<br/>
         {cardPrice}<br/>
         {cardAvailability}
       
       </CardDescription>
     </CardHeader>
-    <Button className='mx-auto'>Book Now</Button>
+    <Button className='mx-auto mt-auto'>Book Now</Button>
     </div>
     
   )
